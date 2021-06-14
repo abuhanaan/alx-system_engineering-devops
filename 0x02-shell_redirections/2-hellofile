@@ -1,0 +1,2 @@
+#!/bin/bash
+less passwd | cat -e
