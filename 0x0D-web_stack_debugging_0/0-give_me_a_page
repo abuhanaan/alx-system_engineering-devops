@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Tweaking the Apache server to work as per specs.
+echo "Hello Holberton" >> /var/www/html/index.html
