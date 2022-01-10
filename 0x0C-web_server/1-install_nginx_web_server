@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Installs Nginx with the following configurations:
-#+    Listens on port 80.
-#+    Returns a page containing "Hello World!"
+# Installs Nginx, listens on port 80 and prints Hello world
 
 apt update
 apt-get -y install nginx
