@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Install and configure HAproxy on my lb-01 server.
+# Install and configure HAproxy on my lb-01 server
+# to enable it send traffic to server1 and 2.
 apt-get -y install haproxy
 
 # edit config file
