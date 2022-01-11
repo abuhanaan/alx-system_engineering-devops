@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on my lb-01 server.
+apt-get -y install haproxy
+
+# edit config file
+server_config=\
+"
+frontend mustopha-alx-frontend
+        bind *:80
+        mode http
+        default_backend mustopha-alx-backend
+backend mustopha-alx-backend
+        balance roundrobin
+        server 901-web-01 34.75.15.70 check
+        server 901-web-02 34.231.122.233 check
+"
+ echo "$server_config" >> /etc/haproxy/haproxy.cfg
+
+ # enable haproxy to be started by init script
+
+ echo "ENABLED=1" >> /etc/default/haproxy
+
+ sudo service haproxy restart
