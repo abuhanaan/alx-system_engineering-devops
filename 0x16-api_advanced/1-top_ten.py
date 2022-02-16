@@ -8,7 +8,7 @@ def top_ten(subreddit):
     """Prints the titles of the first 10 hottest posts on a given subreddit."""
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
+        "User-Agent": "linux:0x16.api.advanced:v1.0.0"
     }
     params = {
         "limit": 10
